@@ -1,0 +1,78 @@
+.header {
+    background: url(../images/background/section-1\(header\).jpg)
+}
+
+.container {
+    max-width: 1160px;
+    margin: 0 auto;
+}
+.logo{
+    position: relative;
+
+}
+.logo h1 {
+    position: absolute;
+    font-size: 40px;
+    top: 15px;
+    left:15px;
+    color: white
+}
+.green-text {
+    color: #18cfab
+}
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0
+}
+.nav{
+     background-color: rgba(0,0,0,0.5);
+}
+.nav-logo{
+    display: flex;
+    align-items: center
+}
+.nav-logo-text {
+    margin-left: 5px;
+    font-size: 20px;
+    color:white;
+}
+.nav-menu li{
+float: left;
+margin-left: 10px;
+color: #b8b8b8;
+text-transform: uppercase;
+}
+.creative {
+    margin-top: 240px;
+    text-align: center;
+    padding-bottom:240px
+}
+.creative h4 {
+font-size: 35px;
+color: white;
+margin-bottom: 45px;
+}
+.creative h1 {
+    font-size: 70px;
+    margin-bottom: 35px;
+    color:white
+}
+.small {
+    font-size: 30px;
+    color: #d4d4d4;
+    margin-bottom: 140px
+}
+
+.btn {
+    width: 165px;
+    height: 60px;
+    border-top: 5px solid white;
+    border-radius: 5px;
+    color: white;
+    background-color: #00cbf6
+}
+.background-green{
+    background-color: #18cfab
+}
