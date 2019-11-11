@@ -24,7 +24,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 0
+    height: 120px;
 }
 .nav{
      background-color: rgba(0,0,0,0.5);
@@ -35,14 +35,22 @@
 }
 .nav-logo-text {
     margin-left: 5px;
-    font-size: 20px;
+    font-size: 26px;
     color:white;
 }
+.nav-menu {
+    align-self: stretch;
+}
 .nav-menu li{
+    line-height: 7.5;
 float: left;
 margin-left: 10px;
 color: #b8b8b8;
 text-transform: uppercase;
+cursor: pointer;
+}
+.nav-menu li:hover {
+    border-bottom: 3px solid #18cfab
 }
 .creative {
     margin-top: 240px;
@@ -68,11 +76,42 @@ margin-bottom: 45px;
 .btn {
     width: 165px;
     height: 60px;
-    border-top: 5px solid white;
     border-radius: 5px;
     color: white;
-    background-color: #00cbf6
+    background-color: #00cbf6;
+    cursor: pointer;
 }
 .background-green{
     background-color: #18cfab
+}
+.background-dark-blue {
+    background-color: #1c2a33
+}
+.border-top-green {
+    border-top:4px solid #18cfab
+}
+.border-top-white {
+    border-top:4px solid white
+}
+.options{
+    display: flex
+}
+.color-white {
+    color: white
+}
+.option-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 370px
+}
+.option-item img {
+    margin-bottom: 48px
+}
+.option-item p {
+    text-transform: uppercase;
+    font-size: 20px
 }
