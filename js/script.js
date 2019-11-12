@@ -17,3 +17,15 @@ triangle.style.cssText=" position:absolute ; bottom:-9px;background-color width:
      designText[i].classList.remove("hidden")
    }
  }
+ let loadMore =document.querySelector(".load-more")
+ let web =document.querySelectorAll(".web")
+ loadMore.addEventListener("click",addImages)
+
+ function addImages(){
+   web.forEach((x)=>{
+     x.style.display="block"
+
+   })
+   loadMore.style.display="none"
+ }
+ 

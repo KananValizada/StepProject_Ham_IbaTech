@@ -267,3 +267,9 @@ border-radius: 50%
 .load-more span {
     font-size: 18px
 }
+.web {
+    display: none;
+}
+.wordpress {
+    display: none;
+}
