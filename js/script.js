@@ -19,13 +19,25 @@ triangle.style.cssText=" position:absolute ; bottom:-9px;background-color width:
  }
  let loadMore =document.querySelector(".load-more")
  let web =document.querySelectorAll(".web")
+ let wordpress =document.querySelectorAll(".wordpress")
+ let landingPage =document.querySelectorAll(".landing-page")
  loadMore.addEventListener("click",addImages)
-
+let n=0
  function addImages(){
+   n++
+   console.log(n)
    web.forEach((x)=>{
      x.style.display="block"
 
    })
-   loadMore.style.display="none"
+   for(let i=0;i<5;i++){
+     wordpress[i].style.display="block"
+   }
+   if(n==2){
+     wordpress.forEach(x=>x.style.display="block")
+     landingPage.forEach(x=>x.style.display="block")
+     loadMore.style.display ="none"
+   }
+   
  }
  
