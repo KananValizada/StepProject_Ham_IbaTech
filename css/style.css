@@ -87,9 +87,7 @@ margin-bottom: 45px;
 .background-dark-blue {
     background-color: #1c2a33
 }
-.border-top-green {
-    border-top:4px solid #18cfab
-}
+
 .border-top-white {
     border-top:4px solid white
 }
@@ -169,6 +167,7 @@ margin-bottom: 45px;
     display: flex;
     
 }
+
 .design-text p {
     text-align: justify;
     margin-left: 20px;
@@ -270,4 +269,8 @@ border-radius: 50%
 }
 .web,.wordpress,.landing-page {
     display: none;
+}
+.option-style {
+    border-top:4px solid #18cfab !important;
+    color:#18cfab
 }

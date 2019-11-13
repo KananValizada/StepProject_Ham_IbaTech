@@ -21,6 +21,7 @@ triangle.style.cssText=" position:absolute ; bottom:-9px;background-color width:
  let web =document.querySelectorAll(".web")
  let wordpress =document.querySelectorAll(".wordpress")
  let landingPage =document.querySelectorAll(".landing-page")
+ let graphicDesign = document.querySelectorAll(".graphic-design")
  loadMore.addEventListener("click",addImages)
 let n=0
  function addImages(){
@@ -28,7 +29,6 @@ let n=0
    console.log(n)
    web.forEach((x)=>{
      x.style.display="block"
-
    })
    for(let i=0;i<5;i++){
      wordpress[i].style.display="block"
@@ -38,6 +38,30 @@ let n=0
      landingPage.forEach(x=>x.style.display="block")
      loadMore.style.display ="none"
    }
-   
+ }
+ let amazingOptions = document.querySelector(".amazing-work-options")
+ let amazingOptionsLi =document.querySelectorAll(".amazing-work-options>li")
+ amazingOptions.addEventListener("click",sortImages)
+ function sortImages(event){
+   graphicDesign.forEach(x=>x.style.display="none")
+  landingPage.forEach(x=>x.style.display="none")
+  web.forEach(x=>x.style.display="none")
+  wordpress.forEach(x=>x.style.display="none")
+  amazingOptionsLi.forEach(x=>x.classList.remove("option-style"))
+  event.target.classList.add("option-style")
+  loadMore.style.display ="none"
+  n=0
+if(event.target.innerText=="Graphic Design"){
+  graphicDesign.forEach(x=>x.style.display="block")
+}else if(event.target.innerText=="Web Design"){
+  web.forEach(x=>x.style.display="block")
+}else if(event.target.innerText=="Landing Pages"){
+  landingPage.forEach(x=>x.style.display="block")
+}else if(event.target.innerText=="Wordpress"){
+  wordpress.forEach(x=>x.style.display="block")
+}else {
+  graphicDesign.forEach(x=>x.style.display="block")
+  loadMore.style.display ="flex"
+}
  }
  
