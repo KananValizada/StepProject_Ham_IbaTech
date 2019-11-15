@@ -44,7 +44,7 @@
 .nav-menu li{
     line-height: 7.5;
 float: left;
-margin-left: 10px;
+margin-left: 20px;
 color: #b8b8b8;
 text-transform: uppercase;
 cursor: pointer;
@@ -91,6 +91,9 @@ margin-bottom: 45px;
 .border-top-white {
     border-top:4px solid white
 }
+.border-top-green{
+    border-top: 4px solid #18cfab
+}
 .options{
     display: flex
 }
@@ -119,7 +122,8 @@ margin-bottom: 45px;
 }
 .header-text-title {
     font-size: 36px;
-    margin-top: 80px;
+    padding-top: 80px;
+    padding-bottom: 70px
     
 }
 .header-text-title::after {
@@ -138,7 +142,6 @@ margin-bottom: 45px;
 }
 .design-options  {
     display: flex;
-    margin-top: 70px;
     margin-bottom: 24px; 
       background-color: #f8fcfe;
 }
@@ -175,7 +178,6 @@ margin-bottom: 45px;
 }
 .design-text {
     display: flex;
-    
 }
 
 .design-text p {
@@ -211,8 +213,12 @@ margin-bottom: 45px;
     color: #d8d8d8;
     margin-bottom: 76px
 }
+.our-amazing-work {
+    background-color: #f8fcfe;
+    padding-bottom:100px
+}
 .amazing-work-options-parent{
-    margin:70px 0;
+    margin-bottom:70px 
     
 }
 .amazing-work-options {
@@ -283,4 +289,58 @@ border-radius: 50%
 .option-style {
     border-top:4px solid #18cfab !important;
     color:#18cfab
+}
+.breaking-news {
+display: flex;
+justify-content: space-between;
+flex-wrap: wrap
+}
+.breaking-news-item{
+    display: block;
+position: relative;
+margin-bottom: 45px;
+text-decoration: none
+}
+.breaking-news-item:hover .breaking-news-date{
+    background-color: #18cfab
+}
+.breaking-news-item:hover .breaking-news-blog h3 {
+    color: #18cfab
+}
+.breaking-news-date {
+    position: absolute;
+    background-color: #203e38;
+    width: 70px;
+    height: 65px;
+    right: 0;
+    top:0;
+    box-sizing: border-box;
+    padding:15px 20px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.25
+}
+.breaking-news-blog{
+    width: 260px;
+    height: 70px;
+    box-sizing: border-box;
+    padding-top:14px;
+    padding-left: 16px;
+    background-color: #f8fcfe
+
+}
+.breaking-news-blog h3 {
+    font-size: 18px;
+    color: #717171;
+    margin-bottom: 14px;
+    font-weight: 700
+}
+.breaking-news span {
+    font-size: 14px;
+    color: #abacad
+}
+.breaking-news span:last-child::before {
+content: "|";
+display: inline-block;
+margin:0 5px
 }
