@@ -61,11 +61,13 @@ cursor: pointer;
 font-size: 35px;
 color: white;
 margin-bottom: 45px;
+text-transform: uppercase
 }
 .creative h1 {
     font-size: 70px;
     margin-bottom: 35px;
-    color:white
+    color:white;
+    text-transform: uppercase
 }
 .small {
     font-size: 30px;
@@ -290,6 +292,9 @@ border-radius: 50%
     border-top:4px solid #18cfab !important;
     color:#18cfab
 }
+.breaking-News-sect{
+    border-top:1px solid #e1e1e1;
+}
 .breaking-news {
 display: flex;
 justify-content: space-between;
@@ -343,4 +348,67 @@ text-decoration: none
 content: "|";
 display: inline-block;
 margin:0 5px
+}
+.people-say-sect{
+    background: url(../images/background/section-3.jpg)
+}
+.people-say {
+
+    padding-bottom: 25px
+}
+
+.slider-nav{
+    width: 600px;
+    padding: 0 25px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.slider-nav img {
+    border-radius: 50%;
+    box-shadow: -1px 1px 2px 5px #114c4b;
+    z-index: 2;
+    transition: 0.5s;
+}
+.slider-nav img:hover {
+    transform: translateY(-15px)
+}
+.people-say-content {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
+}
+.people-say-content> p {
+    max-width: 1098px;
+    text-align: center;
+    margin: 40px 0;
+    color: white
+    
+}
+.people-say-content div {
+    width: 120px;
+    margin-bottom: 25px
+}
+.people-say-content div h4 {
+    color: #18cfab;
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 10px
+}
+.people-say-content img {
+    margin-bottom: 50px;
+    border-radius: 50%;
+    border: 3px solid #18cfab;
+    box-shadow: -1px 1px 4px 12px #114c4b
+}
+.people-say-content div p {
+    font-size: 14px;
+    color: #bbbbbb;
+    text-align: center;
+    
+}
+.people-say-content span{
+color:#18cfab;
+font-size: 50px
 }

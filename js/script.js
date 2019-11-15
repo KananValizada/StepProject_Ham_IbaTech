@@ -65,3 +65,18 @@ if(event.target.innerText=="Graphic Design"){
 }
  }
  
+ $('.slider-for').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+  asNavFor: '.slider-nav'
+});
+$('.slider-nav').slick({
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  asNavFor: '.slider-for',
+  centerMode: true,
+  arrows:true,
+  focusOnSelect: true,
+
+});
