@@ -81,36 +81,28 @@ $('.slider-nav').slick({
 
 });
 
-let width =document.querySelectorAll(".slick-slide")
-width.forEach((x)=>{
-  x.style.cssText="outline: none;"
-})
-let sliderImageActive =document.querySelectorAll(".slider-img")
-sliderImageActive.forEach((x)=>{
-  x.addEventListener("click",makeActive)
-  function makeActive(){
-    sliderImageActive.forEach(x=>x.classList.remove("slider-img-active"))
-    x.classList.add("slider-img-active")
-
-  }
-})
+//   ********************  Slick Slide  *************************   //
 
 
+let slickSlide =document.querySelectorAll(".slider-nav .slick-slide")
+let slickSlideImages= document.querySelectorAll(".slider-nav .slick-slide img")
 let prevButton =document.querySelector(".slick-prev")
 let nextButton =document.querySelector(".slick-next")
 prevButton.addEventListener("click",arrowActive)
 nextButton.addEventListener("click",arrowActive)
+slickSlide.forEach((x)=>{
+  x.style.cssText="outline: none;"
+})
 function arrowActive(){
-    let active=document.querySelector(".slick-center")
-    let passive=document.querySelector(".slider-img-active")
-    if(passive===null){
-      active.classList.add("slider-img-active")
-      active.classList.add("slick-current")
-      active.childNodes[1].childNodes[1].classList.add("slider-img-active")
-    }else{
-       passive.classList.remove("slider-img-active")
-       passive.childNodes[1].childNodes[1].classList.remove("slider-img-active")
-       active.classList.add("slider-img-active")
-       active.childNodes[1].childNodes[1].classList.add("slider-img-active")
-    }
+slickSlideImages.forEach(x=>x.classList.remove("slider-img-active"))
+for(let i=0 ;i<slickSlide.length;i++){
+if(slickSlide[i].classList.contains("slick-center")){
+  slickSlideImages[i].classList.add("slider-img-active")}}
 }
+slickSlideImages.forEach(x=>{
+  x.addEventListener("click",imageImprove)
+  function imageImprove(){
+    slickSlideImages.forEach(x=>x.classList.remove("slider-img-active"))
+    x.classList.add("slider-img-active")
+  }
+})

@@ -56,10 +56,12 @@
     position: relative;
     top: 0;
     left: 0;
-margin-top:50px;
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+.slider-nav .slick-track {
+    margin-top:50px;
 }
 .slick-track:before,
 .slick-track:after

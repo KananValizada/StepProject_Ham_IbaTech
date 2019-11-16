@@ -440,9 +440,9 @@ margin:0 5px
 .people-say-content> p {
     max-width: 1095px;
     text-align: center;
-    margin: 40px 0;
-    line-height: 2;
-    color: white
+    margin: 45px 0;
+    line-height: 1.6;
+    color: #bbbbbb
     
 }
 .people-say-content div {
@@ -455,7 +455,7 @@ margin:0 5px
     text-align: center;
     margin-bottom: 10px
 }
-.people-say-content img {
+.slider-for-image {
     margin-bottom: 50px;
     border-radius: 50%;
     border: 3px solid #18cfab;
