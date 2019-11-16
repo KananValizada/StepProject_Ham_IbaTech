@@ -6,16 +6,41 @@
     max-width: 1160px;
     margin: 0 auto;
 }
-.logo{
+.hexa-logo{
     position: relative;
-
 }
-.logo h1 {
-    position: absolute;
+.hexagon {
+    width: 55px;
+    height: 40px;
     font-size: 40px;
+    text-align: center;
+    line-height: 40px;
     top: 15px;
     left:15px;
+    background-color: #18cfab;
     color: white
+}
+.hexagon::before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: -15px;
+    left: -1px;
+    border-style: solid;
+    border-width: 0 28px 15px 29px;
+    border-color: transparent transparent #18cfab transparent;
+}
+.hexagon::after{
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: -1px;
+    width: 0;
+height: 0;
+border-style: solid;
+border-width: 15px 28px 0 29px;
+border-color: #18cfab transparent transparent transparent;
 }
 .green-text {
     color: #18cfab
@@ -34,9 +59,12 @@
     align-items: center
 }
 .nav-logo-text {
-    margin-left: 5px;
+    margin-left: 10px;
     font-size: 26px;
     color:white;
+}
+.nav-logo-text span {
+    font-weight:700 ;
 }
 .nav-menu {
     align-self: stretch;
@@ -57,17 +85,19 @@ cursor: pointer;
     text-align: center;
     padding-bottom:240px
 }
-.creative h4 {
+.creative-header h4 {
 font-size: 35px;
 color: white;
 margin-bottom: 45px;
-text-transform: uppercase
+text-transform: uppercase;
+font-weight: 700;
 }
-.creative h1 {
+.creative-header h1 {
     font-size: 70px;
     margin-bottom: 35px;
     color:white;
-    text-transform: uppercase
+    text-transform: uppercase;
+    font-weight: 700;
 }
 .small {
     font-size: 30px;
@@ -82,6 +112,10 @@ text-transform: uppercase
     color: white;
     background-color: #00cbf6;
     cursor: pointer;
+    border: none;
+}
+.margin-right-15 {
+    margin-right: 15px;
 }
 .background-green{
     background-color: #18cfab
@@ -94,7 +128,7 @@ text-transform: uppercase
     border-top:4px solid white
 }
 .border-top-green{
-    border-top: 4px solid #18cfab
+    border-top: 3px solid #18cfab
 }
 .options{
     display: flex
@@ -112,12 +146,23 @@ text-transform: uppercase
     width: 100%;
     height: 370px
 }
+.option-item-special{
+    padding-top: 8px;
+    margin-bottom: 13px;
+    box-sizing: border-box;
+}
 .option-item img {
     margin-bottom: 48px
 }
 .option-item p {
     text-transform: uppercase;
     font-size: 20px
+}
+.option-border-green{
+    border-top:7px solid #18cfab;
+}
+.option-border-white{
+    border-top:7px solid white;
 }
 .header-text {
     text-align: center
@@ -134,7 +179,7 @@ text-transform: uppercase
     content: " ";
     display: block;
     width: 75px;
-    height: 10px;
+    height: 5px;
     transform: skew(50deg,0);
     border-top:1px solid #18cfab;
     border-bottom:1px solid #18cfab;
@@ -237,7 +282,11 @@ cursor: pointer;
 }
 .amazing-work-options li:hover{
     color: #18cfab;
-    border-top:4px solid #18cfab
+    border-top:2px solid #18cfab
+}
+.option-style {
+    border-top:2px solid #18cfab !important;
+    color:#18cfab
 }
 .amazing-work-images {
     display: flex;
@@ -276,6 +325,10 @@ padding: 20px;
 border:1px solid #18cfab;
 border-radius: 50%
 } 
+.image-hover-icons i:hover {
+    background-color: #18cfab;
+    color: white;
+}
 .load-more{
     margin: 0 auto;
     display: flex;
@@ -288,10 +341,7 @@ border-radius: 50%
 .web,.wordpress,.landing-page {
     display: none;
 }
-.option-style {
-    border-top:4px solid #18cfab !important;
-    color:#18cfab
-}
+
 .breaking-News-sect{
     border-top:1px solid #e1e1e1;
 }
@@ -350,28 +400,36 @@ display: inline-block;
 margin:0 5px
 }
 .people-say-sect{
-    background: url(../images/background/section-3.jpg)
+    background: url(../images/background/section-3.jpg);
+    margin-top:85px;
+    padding-bottom: 50px;
 }
 .people-say {
-
     padding-bottom: 25px
 }
 
 .slider-nav{
-    width: 600px;
+    width: 500px;
     padding: 0 25px;
     margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
+    
 }
-.slider-nav img {
+.slider-img {
     border-radius: 50%;
+    outline: none;
     box-shadow: -1px 1px 2px 5px #114c4b;
-    z-index: 2;
-    transition: 0.5s;
+    /* z-index: 2; */
+    transition: 0.5s transform;
+    border:  1px solid transparent;
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+    
 }
-.slider-nav img:hover {
-    transform: translateY(-15px)
+
+.slider-img-active {
+    transform: translateY(-15px) !important;
+    border-color: #18cfab;
 }
 .people-say-content {
     display: flex !important;
@@ -380,9 +438,10 @@ margin:0 5px
     align-items: center
 }
 .people-say-content> p {
-    max-width: 1098px;
+    max-width: 1095px;
     text-align: center;
     margin: 40px 0;
+    line-height: 2;
     color: white
     
 }
@@ -411,4 +470,16 @@ margin:0 5px
 .people-say-content span{
 color:#18cfab;
 font-size: 50px
+}
+.custom-slide {
+    margin-left:30px
+}
+.footer {
+    height: 108px;
+    background-color: #22353f;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    color: #7f8689;
+    border-top: #7f8689;
 }

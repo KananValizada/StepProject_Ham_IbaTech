@@ -41,7 +41,7 @@ let n=0
  }
  let amazingOptions = document.querySelector(".amazing-work-options")
  let amazingOptionsLi =document.querySelectorAll(".amazing-work-options>li")
- amazingOptions.addEventListener("click",sortImages)
+ amazingOptionsLi.forEach(x=>x.addEventListener("click",sortImages))
  function sortImages(event){
    graphicDesign.forEach(x=>x.style.display="none")
   landingPage.forEach(x=>x.style.display="none")
@@ -72,7 +72,7 @@ if(event.target.innerText=="Graphic Design"){
   asNavFor: '.slider-nav'
 });
 $('.slider-nav').slick({
-  slidesToShow: 3,
+  slidesToShow: 4,
   slidesToScroll: 1,
   asNavFor: '.slider-for',
   centerMode: true,
@@ -80,3 +80,37 @@ $('.slider-nav').slick({
   focusOnSelect: true,
 
 });
+
+let width =document.querySelectorAll(".slick-slide")
+width.forEach((x)=>{
+  x.style.cssText="outline: none;"
+})
+let sliderImageActive =document.querySelectorAll(".slider-img")
+sliderImageActive.forEach((x)=>{
+  x.addEventListener("click",makeActive)
+  function makeActive(){
+    sliderImageActive.forEach(x=>x.classList.remove("slider-img-active"))
+    x.classList.add("slider-img-active")
+
+  }
+})
+
+
+let prevButton =document.querySelector(".slick-prev")
+let nextButton =document.querySelector(".slick-next")
+prevButton.addEventListener("click",arrowActive)
+nextButton.addEventListener("click",arrowActive)
+function arrowActive(){
+    let active=document.querySelector(".slick-center")
+    let passive=document.querySelector(".slider-img-active")
+    if(passive===null){
+      active.classList.add("slider-img-active")
+      active.classList.add("slick-current")
+      active.childNodes[1].childNodes[1].classList.add("slider-img-active")
+    }else{
+       passive.classList.remove("slider-img-active")
+       passive.childNodes[1].childNodes[1].classList.remove("slider-img-active")
+       active.classList.add("slider-img-active")
+       active.childNodes[1].childNodes[1].classList.add("slider-img-active")
+    }
+}
