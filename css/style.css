@@ -70,10 +70,12 @@ border-color: #18cfab transparent transparent transparent;
     align-self: stretch;
 }
 .nav-menu li{
-    line-height: 7.5;
+    line-height: 120px;
 float: left;
 margin-left: 20px;
 color: #b8b8b8;
+font-size: 14px;
+font-weight: 700;
 text-transform: uppercase;
 cursor: pointer;
 }
@@ -253,6 +255,7 @@ font-weight: 700;
     font-size:40px;
     text-transform: uppercase;
     margin-bottom: 35px;
+    font-weight: 700;
 
 }
 .purchase-muted{
@@ -446,14 +449,15 @@ margin:0 5px
     
 }
 .people-say-content div {
-    width: 120px;
+    width: 130px;
     margin-bottom: 25px
 }
 .people-say-content div h4 {
     color: #18cfab;
     font-size: 16px;
     text-align: center;
-    margin-bottom: 10px
+    margin-bottom: 10px;
+    font-weight: 700;
 }
 .slider-for-image {
     margin-bottom: 50px;
