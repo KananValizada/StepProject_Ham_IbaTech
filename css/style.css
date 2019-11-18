@@ -194,9 +194,19 @@ font-weight: 700;
     margin-bottom: 24px; 
       background-color: #f8fcfe;
 }
-.design-toogle{
+
+.design-toggle{
     background-color: #18cfab;
     color:white
+}
+.design-toggle::after{
+    content: "";
+    position:absolute ; bottom:-9px;
+    width: 0; 
+    height: 0;
+    border-style: solid;
+    border-width: 10px 10px 0 10px;
+    border-color: #18cfab transparent transparent transparent;
 }
 .design-toogle::after{
     content: " ";
