@@ -7,6 +7,7 @@ for (let i = 0; i < designLi.length; i++) {
   designLi.eq(i).attr("dataKey", i)
   designText.eq(i).attr("dataValue", i)
 }
+
 designLi.click(function () {
   designLi.removeClass("design-toggle")
   $(this).addClass('design-toggle');
@@ -34,7 +35,7 @@ function addImages() {
 }
 let amazingOptionsLi = $(".amazing-work-options>li")
 amazingOptionsLi.on("click", sortImages)
-function sortImages() {
+function sortImages(event) {
   amazingImages.hide()
   amazingOptionsLi.removeClass("option-style")
   $(this).addClass("option-style")
@@ -66,15 +67,13 @@ $('.slider-nav').slick({
   focusOnSelect: true,
 });
 
-$(".slider-nav .slick-slide").css("outline", "none")
-let slickSlideImages = $(".slider-nav .slick-slide img")
+$(".slick-slide").css("outline", "none")
 $(".slick-prev").on("click", arrowActive)
 $(".slick-next").on("click", arrowActive)
-function arrowActive() {
-  slickSlideImages.removeClass("slider-img-active")
-  $(".slick-center div img").addClass("slider-img-active")
+$(".slick-slide").on("click", arrowActive)
+$("body").on("mousemove", arrowActive)
+function arrowActive(){
+  $(".slick-slide img").removeClass("slider-img-active")
+  $(".slick-center img").addClass("slider-img-active")
 }
-slickSlideImages.click(function imageImprove() {
-  slickSlideImages.removeClass("slider-img-active")
-  $(this).addClass("slider-img-active")
-})
+
