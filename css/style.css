@@ -337,7 +337,8 @@ font-size: 24px
 .image-hover-icons i {
 padding: 20px;
 border:1px solid #18cfab;
-border-radius: 50%
+border-radius: 50%;
+cursor: pointer;
 } 
 .image-hover-icons i:hover {
     background-color: #18cfab;

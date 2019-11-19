@@ -21,29 +21,24 @@ designLi.click(function () {
 let loadMore = $(".load-more")
 let amazingImages = $(".amazing-work-images-item")
 let amazingWork = $(".amazing-work")
-let n = 0
-for (let i = 0; i < 12; i++) { amazingImages.eq(i).show()}
+let x = 12
+$('.amazing-work-images-item:lt(' + x + ')').show()
 amazingWork.on("click", (event) => {
   if ($(event.target).attr("btn") == "btn") {
-    n++
-    for (let i = 0; i < 24; i++) {
-      amazingImages.eq(i).show()
-    }
-    if (n == 2) {
-      amazingImages.show()
-      loadMore.hide()
-    }
+    x += 12
+    $('.amazing-work-images-item:lt(' + x + ')').show()
+    if (x == 36) { loadMore.hide() }
   } else if (event.target.tagName == "LI") {
     amazingImages.hide()
     $(".option-style").removeClass("option-style")
     $(event.target).addClass("option-style")
     loadMore.hide()
-    n = 0
+    x = 12
     let dataKey = $(event.target).attr("datakey")
     if (dataKey != undefined) {
       $(`.${dataKey}`).show()
     } else {
-      for (let i = 0; i < 12; i++) { amazingImages.eq(i).show()};
+      $('.amazing-work-images-item:lt(' + x + ')').show()
       loadMore.css("display", "flex")
     }
   }
