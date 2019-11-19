@@ -19,36 +19,35 @@ designLi.click(function () {
 // ***************** OUR AMAZING WORK **********************  //
 
 let loadMore = $(".load-more")
-let graphicDesign = $(".graphic-design")
 let amazingImages = $(".amazing-work-images-item")
-loadMore.on("click", addImages)
+let amazingWork = $(".amazing-work")
 let n = 0
-function addImages() {
-  n++
-  for (let i = 0; i < 24; i++) {
-    amazingImages.eq(i).show()
-  }
-  if (n == 2) {
-    amazingImages.show()
+for (let i = 0; i < 12; i++) { amazingImages.eq(i).show()}
+amazingWork.on("click", (event) => {
+  if ($(event.target).attr("btn") == "btn") {
+    n++
+    for (let i = 0; i < 24; i++) {
+      amazingImages.eq(i).show()
+    }
+    if (n == 2) {
+      amazingImages.show()
+      loadMore.hide()
+    }
+  } else if (event.target.tagName == "LI") {
+    amazingImages.hide()
+    $(".option-style").removeClass("option-style")
+    $(event.target).addClass("option-style")
     loadMore.hide()
+    n = 0
+    let dataKey = $(event.target).attr("datakey")
+    if (dataKey != undefined) {
+      $(`.${dataKey}`).show()
+    } else {
+      for (let i = 0; i < 12; i++) { amazingImages.eq(i).show()};
+      loadMore.css("display", "flex")
+    }
   }
-}
-let amazingOptionsLi = $(".amazing-work-options>li")
-amazingOptionsLi.on("click", sortImages)
-function sortImages(event) {
-  amazingImages.hide()
-  amazingOptionsLi.removeClass("option-style")
-  $(this).addClass("option-style")
-  loadMore.hide()
-  n = 0
-  let dataKey = $(this).attr("dataKey")
-  if (dataKey != undefined) {
-    $(`.${dataKey}`).show()
-  } else {
-    graphicDesign.show();
-    loadMore.css("display", "flex")
-  }
-}
+})
 
 //   ********************  Slick Slide  *************************   //
 
@@ -63,16 +62,13 @@ $('.slider-nav').slick({
   slidesToScroll: 1,
   asNavFor: '.slider-for',
   centerMode: true,
-  arrows: true,
   focusOnSelect: true,
 });
 
 $(".slick-slide").css("outline", "none")
-$(".slick-prev").on("click", arrowActive)
-$(".slick-next").on("click", arrowActive)
-$(".slick-slide").on("click", arrowActive)
+$(".people-say").on("click", arrowActive)
 $("body").on("mousemove", arrowActive)
-function arrowActive(){
+function arrowActive() {
   $(".slick-slide img").removeClass("slider-img-active")
   $(".slick-center img").addClass("slider-img-active")
 }

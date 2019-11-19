@@ -311,6 +311,7 @@ cursor: pointer;
 }
 .amazing-work-images-item{
     position: relative;
+     display: none;
 }
 .image-hover {
     position: absolute;
@@ -351,9 +352,7 @@ border-radius: 50%
 .load-more span {
     font-size: 18px
 }
-.web,.wordpress,.landing-page {
-    display: none;
-}
+
 
 .breaking-News-sect{
     border-top:1px solid #e1e1e1;
