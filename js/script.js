@@ -1,4 +1,3 @@
-
 // ***************** OUR CERVICES TAB SECTION **********************  //
 
 let designLi = $(".design-options>li")
@@ -22,27 +21,40 @@ let loadMore = $(".load-more")
 let amazingImages = $(".amazing-work-images-item")
 let amazingWork = $(".amazing-work")
 let x = 12
-$('.amazing-work-images-item:lt(' + x + ')').show()
+amazingImages.slice(0, x).show()
 amazingWork.on("click", (event) => {
   if ($(event.target).attr("btn") == "btn") {
+    $(".centered").show()
     x += 12
-    $('.amazing-work-images-item:lt(' + x + ')').show()
-    if (x == 36) { loadMore.hide() }
+    setTimeout(() => {
+      $(".centered").hide()
+      amazingImages.slice(0, x).show()
+    }, 2000)
+    if (x == 36) {
+      loadMore.hide()
+    }
   } else if (event.target.tagName == "LI") {
+    let dataKey = $(event.target).attr("datakey")
+    if (x > 12 && !dataKey) {
+      if (x !== 36) {
+        loadMore.css("display", "flex")
+      }
+      return false
+    }
     amazingImages.hide()
+    loadMore.hide()
     $(".option-style").removeClass("option-style")
     $(event.target).addClass("option-style")
-    loadMore.hide()
     x = 12
-    let dataKey = $(event.target).attr("datakey")
-    if (dataKey != undefined) {
+    if (dataKey) {
       $(`.${dataKey}`).show()
     } else {
-      $('.amazing-work-images-item:lt(' + x + ')').show()
+      amazingImages.slice(0, x).show();
       loadMore.css("display", "flex")
     }
   }
 })
+
 
 //   ********************  Slick Slide  *************************   //
 
@@ -63,8 +75,8 @@ $('.slider-nav').slick({
 $(".slick-slide").css("outline", "none")
 $(".people-say").on("click", arrowActive)
 $("body").on("mousemove", arrowActive)
+
 function arrowActive() {
   $(".slick-slide img").removeClass("slider-img-active")
   $(".slick-center img").addClass("slider-img-active")
 }
-
