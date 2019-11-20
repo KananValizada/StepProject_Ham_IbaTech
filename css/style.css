@@ -13,6 +13,8 @@
     background-color: #00cbf6;
     cursor: pointer;
     border: none;
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
 .margin-right-15 {
@@ -34,9 +36,6 @@
 .border-top-green {
     border-top: 3px solid #18cfab
 }
-.color-white {
-    color: white
-}
 .header-text {
     text-align: center
 }
@@ -44,7 +43,8 @@
 .header-text-title {
     font-size: 36px;
     padding-top: 80px;
-    padding-bottom: 70px
+    padding-bottom: 70px;
+    color:#4e4e4e
 }
 
 .header-text-title::after {
@@ -53,8 +53,8 @@
     content: " ";
     display: block;
     width: 75px;
-    height: 5px;
-    transform: skew(50deg, 0);
+    height: 3px;
+    transform: skew(75deg, 0);
     border-top: 1px solid #18cfab;
     border-bottom: 1px solid #18cfab;
 }
@@ -74,6 +74,7 @@
     font-size: 40px;
     text-align: center;
     line-height: 40px;
+    font-weight: 700;
     top: 15px;
     left: 15px;
     background-color: #18cfab;
@@ -85,7 +86,7 @@
     position: absolute;
     width: 0;
     height: 0;
-    top: -15px;
+    top: -14.5px;
     left: -1px;
     border-style: solid;
     border-width: 0 28px 15px 29px;
@@ -95,7 +96,7 @@
 .hexagon::after {
     content: "";
     position: absolute;
-    bottom: -15px;
+    bottom: -14.5px;
     left: -1px;
     width: 0;
     height: 0;
@@ -140,7 +141,7 @@
     float: left;
     margin-left: 20px;
     color: #b8b8b8;
-    font-size: 14px;
+    font-size: 13pt;
     font-weight: 700;
     text-transform: uppercase;
     cursor: pointer;
@@ -204,7 +205,8 @@
 
 .option-item p {
     text-transform: uppercase;
-    font-size: 20px
+    font-size: 20px;
+    font-weight: 700;
 }
 
 .option-border-green {
@@ -224,12 +226,6 @@
     margin-bottom: 24px;
     background-color: #f8fcfe;
 }
-
-.design-toggle {
-    background-color: #18cfab;
-    color: white
-}
-
 .design-toggle::after {
     content: "";
     position: absolute;
@@ -259,7 +255,7 @@
     width: 100%;
     height: 70px;
     border: 1px solid #ebecec;
-
+    color:#838484;
     position: relative;
     cursor: pointer;
     border-left: none
@@ -281,8 +277,14 @@
     text-align: justify;
     margin-left: 20px;
     font-size: 14px;
-    line-height: 2
+    line-height: 2;
+    color:#777777
 }
+.design-toggle {
+    background-color: #18cfab;
+    color: white !important;
+}
+
 /* Purchase Section */
 .purchase-sect {
     background: url(../images/background/section-2.jpg);
@@ -334,7 +336,7 @@
     border: 1px solid #ebebeb;
     font-size: 14px;
     cursor: pointer;
-
+    color:#848484
 }
 
 .amazing-work-options li:hover {
@@ -344,7 +346,7 @@
 
 .option-style {
     border-top: 2px solid #18cfab !important;
-    color: #18cfab
+    color: #18cfab !important;
 }
 
 .amazing-work-images {
@@ -455,6 +457,7 @@
     border: 1px solid #18cfab;
     border-radius: 50%;
     cursor: pointer;
+    color:#18cfab
 }
 
 .image-hover-icons i:hover {
@@ -626,6 +629,60 @@
 
 .custom-slide {
     margin-left: 30px
+}
+.color-white {
+    color: white
+}
+/* Grid sect*/
+
+.grid-images {
+    display: flex;
+    justify-content: space-between;
+}
+.grid-images > div {
+    width: 33%;
+}
+.grid-left>div, .grid-center > div{
+    margin-bottom: 20px;
+}
+.grid-right > div{
+    margin-bottom: 15px
+}
+
+.grid-right {
+    display: flex;
+    flex-direction: column;
+}
+
+.grid-right-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3px;
+}
+.grid-right-top img{
+    width: 49.5%;
+    
+}
+.grid-right-center {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.grid-right-center img {
+    width: 32.8%;
+    margin-bottom: 3px;
+}
+.grid-right-bottom img {
+    width: 100%;
+}
+.grid-btn {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top:55px;
+    margin-bottom:80px;
 }
 
 .footer {
